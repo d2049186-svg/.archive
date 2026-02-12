@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.archive | Directory</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* HEADER & SEARCH AREA */
+        header {
+            width: 100%;
+            max-width: 1000px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; color: #00ff41; text-decoration: none; }
+
+        .search-container {
+            border: 1px solid #333;
+            padding: 5px 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ARTICLE GRID */
+        .directory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .file-card {
+            border: 1px solid #333;
+            background: #111;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .file-card::before {
+            content: "FILE_0" attr(data-id);
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 0.6rem;
+            color: #444;
+        }
+
+        .file-card:hover {
+            border-color: #00ff41;
+            transform: translateY(-3px);
+            background: #161616;
+        }
+
+        .file-tag {
+            color: #00ff41;
+            font-size: 0.7rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .file-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            letter-spacing: -1px;
+        }
+
+        .file-card p {
+            font-size: 0.85rem;
+            color: #888;
+            line-height: 1.5;
+        }
+
+        .status-bar {
+            margin-top: 15px;
+            font-size: 0.7rem;
+            color: #444;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* FOOTER NAV */
+        nav {
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #333;
+            width: 100%;
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        .back-link { color: #888; text-decoration: none; font-size: 0.8rem; }
+        .back-link:hover { color: #00ff41; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">.archive</a>
+        <div class="search-container">SCANNING_DATABASE...</div>
+    </header>
+
+    <div class="directory-grid">
+        <a href="article1.html" class="file-card" data-id="1">
+            <span class="file-tag">[TECH_NEURAL]</span>
+            <h2>The Neural Basis of Memory</h2>
+            <p>Decoding how the human brain stores data and why we forget 40% of our day within 24 hours...</p>
+            <div class="status-bar">
+                <span>STATUS: VERIFIED</span>
+                <span>READ_TIME: 4m</span>
+            </div>
+        </a>
+
+        <a href="article2.html" class="file-card" data-id="2">
+            <span class="file-tag">[SCIENCE_QUANTUM]</span>
+            <h2>Quantum Cryptography</h2>
+            <p>An introduction to unhackable communication channels and the future of digital security.</p>
+            <div class="status-bar">
+                <span>STATUS: ENCRYPTED</span>
+                <span>READ_TIME: 6m</span>
+            </div>
+        </a>
+
+        <a href="article3.html" class="file-card" data-id="3">
+            <span class="file-tag">[HUMAN_BEHAVIOR]</span>
+            <h2>The Focus Protocol</h2>
+            <p>White Hat strategies for high-integrity productivity in a world of digital distractions.</p>
+            <div class="status-bar">
+                <span>STATUS: PUBLIC</span>
+                <span>READ_TIME: 5m</span>
+            </div>
+        </a>
+
+         <a href="article4.html" class="file-card" data-id="4">
+            <span class="file-tag">[MATHS_EQUATIONS]</span>
+            <h2>The equations use for calculations in maths</h2>
+            <p>the basic area,volume,surface area equations for prisms in maths...</p>
+            <div class="status-bar">
+                <span>STATUS: VERIFIED</span>
+                <span>READ_TIME: 16m</span>
+            </div>
+        </a>
+    </div>
+
+    <nav>
+        <a href="index.html" class="back-link">_RETURN_TO_ROOT</a>
+    </nav>
+
+</body>
+</html>
